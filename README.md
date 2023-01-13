@@ -29,11 +29,11 @@
 
 **2) Условие победы в партии:**
 
-<img src="https://github.com/evgeniimarkovskii2003/lab2/blob/main/%D0%BA%D0%BE%D0%BC%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%80%D0%B8%D0%B8.png">
+<img src="https://github.com/evgeniimarkovskii2003/lab4/blob/main/victory%20condition%20in%20the%20game.png">
 
 **3) Условие победы в игре:**
 
-<img src="https://github.com/evgeniimarkovskii2003/lab2/blob/main/%D0%BB%D0%B0%D0%B9%D0%BA%D0%B8.png">
+<img src="https://github.com/evgeniimarkovskii2003/lab4/blob/main/match%20win%20condition.png">
 
 
 
