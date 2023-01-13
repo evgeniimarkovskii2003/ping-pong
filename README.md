@@ -25,7 +25,7 @@
 
 **1) Розыгрыш очка:**
 
-<img src="https://github.com/evgeniimarkovskii2003/lab4/blob/main/%D1%80%D0%BE%D0%B7%D1%8B%D0%B3%D1%80%D1%8B%D1%88%20%D0%BE%D1%87%D0%BA%D0%B0.png>
+<img src="https://github.com/evgeniimarkovskii2003/lab4/blob/main/point%20draw.png">
 
 **2) Условие победы в партии:**
 
