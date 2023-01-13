@@ -57,7 +57,6 @@ function touch(balls,player){ //столкновение с ракетой
 
     return player.left < balls.right && player.top < balls.bottom && player.right > balls.left && player.bottom > balls.top;
 }
-?>
 ```
 
 Определение победителя:
