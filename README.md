@@ -41,47 +41,47 @@
 
 ### 4) Значимые фрагменты кода
 
-Фрагмент кода выдачи постов: 
+Столкновение мяча с ракеткой: 
 ```sh
-<?php
-	$max_page_posts = 100;
-				
-	$page = 1;
-	if (isset($_GET["page"]) && $_GET["page"] > 0)
-		$page = $_GET["page"];
-			
-	if (($page - 1) * $max_page_posts >= $max_posts)
-		$page = ceil($max_posts / $max_page_posts); 
-			
-	for ($i = 1 + ($max_page_posts * ($page - 1)); $i <= ($max_page_posts*$page); $i++) {				
-		
-		if ($i > $max_posts)
-			break;
-				
-		[$text, $like, $post_id] = parse_post($i - 1, $result);
-		[$comments, $comm_count, $c_id, $sub_comm_count] = parse_comment($post_id, $comments_db);
-				
-		echo "<tr> <td>";
-		include ("post.php");
-		echo "</td></tr>";
-				
-		echo "<tr height = 5> </tr>";
-		echo "<tr><td>";
-		include ("comments.php"); 
-		echo "</td></tr>";
-				
-		echo "<tr height = 20> <td> <hr> <td> </tr>";
-	}
-		
+function touch(balls,player){ //столкновение с ракетой
+    //текущее расположени ракетки и мяча
+    player.top = player.y;
+    player.bottom = player.y + player.height;
+    player.left = player.x;
+    player.right = player.x + player.width;
+
+    balls.top = balls.y - balls.radius;
+    balls.bottom = balls.y + balls.radius;
+    balls.left = balls.x - balls.radius;
+    balls.right = balls.x + balls.radius;
+
+    return player.left < balls.right && player.top < balls.bottom && player.right > balls.left && player.bottom > balls.top;
+}
 ?>
 ```
 
-Фрагмент кода, создающий новую запись о посте в базе данных:
+Определение победителя:
 ```sh
-$sql = "INSERT INTO `posts` (`id`, `text`, `like_count`) VALUES (NULL, '".$text."', '0');";
-$link = mysqli_connect("localhost", "admin", "admin", "crud");
-mysqli_set_charset($link, "utf8");
-$res = mysqli_query($link, $sql);
+function Rules(){ 
+	if (user.score == 11) {
+		user.score = 0;
+		computer.score = 0;
+		user.match += 1
+	}
+	else if (computer.score == 11) {
+		user.score = 0;
+		computer.score = 0;
+		computer.match += 1
+	}
+    if (user.match < 3 && computer.match < 3){
+        update();
+        Draw();
+    } else if (computer.match > user.match){
+        alert("Win computer!");
+    } else {
+        alert("Win User!");
+    }
+}
 ```
 ## Вывод
 В ходе выполнения лабораторной работы была разработана система клиент-сервер, реализующую механизм CRUD. Был создан анонимный форум, в котором пользователи могут: оставлять записи, ставить реакции, оставлять комментарии. 
