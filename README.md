@@ -23,13 +23,17 @@
 В конце игры программа выдаст, кто победил, после чего можно перезагрузить сайт и сыграть повторно.
 ### 3) Описание алгоритмов
 
-**1) Добавление канала:**
+**1) Розыгрыш очка:**
 
 <img src="https://github.com/evgeniimarkovskii2003/lab4/blob/main/point%20draw.png">
 
-**2) Добавление сообщения:**
+**2) Условие победы в партии:**
 
 <img src="https://github.com/evgeniimarkovskii2003/lab4/blob/main/victory%20condition%20in%20the%20game.png">
+
+**3) Условие победы в игре:**
+
+<img src="https://github.com/evgeniimarkovskii2003/lab4/blob/main/match%20win%20condition.png">
 
 ### 4) Значимые фрагменты кода
 
